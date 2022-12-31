@@ -24,7 +24,7 @@ public class IntListTest {
     public void testdSquareList() {
         IntList L = IntList.of(1, 2, 3);
         IntList.dSquareList(L);
-        assertEquals(IntList.of(1, 4, 9), L);
+        assertEquals(IntList.of(1, 4, 9), L); // bug is in the dSquareList , it will make the array to null
     }
 
     /**

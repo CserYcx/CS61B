@@ -251,5 +251,23 @@ public class IntList {
         out.format(")");
         return out.toString();
     }
+
+    /* Return a reversed IntList, the method is destructive
+     * If give a null IntList, return null
+     */
+    public static IntList reverse(IntList A){
+        if(A == null){
+            return null;
+        }
+        IntList head = null;
+        IntList next = A;
+        while(next != null){
+            IntList nextList = next.rest;
+            next.rest = head;
+            head = next;
+            next = nextList;
+        }
+        return head;
+    }
 }
 

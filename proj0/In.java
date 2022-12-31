@@ -57,6 +57,7 @@ public final class In {
     private static final String CHARSET_NAME = "UTF-8";
 
     // assume language = English, country = US for consistency with System.out.
+    // Stu Comment: locale is the language environment
     private static final Locale LOCALE = Locale.US;
 
     // the default token separator; we maintain the invariant that this value 
@@ -130,7 +131,7 @@ public final class In {
      * Create an input stream from a filename or web page name.
      */
     public In(String s) {
-        try {
+            try {
             // first try to read file from local file system
             File file = new File(s);
             if (file.exists()) {
@@ -140,6 +141,7 @@ public final class In {
             }
 
             // next try for files included in jar
+            // Stu Comment: Is there no need this? ( should be the this.getClass().getResource(s);?)
             URL url = getClass().getResource(s);
 
             // or URL from web

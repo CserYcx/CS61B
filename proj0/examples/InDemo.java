@@ -28,8 +28,8 @@ public class InDemo {
 			double fractionProduced = in.readDouble();
 			if (name.equals(args[0])) {
 				System.out.println(args[0] + " produces " +
-					               tons + " of salt per year. Very nice!");
-			}			
+						tons + " of salt per year. Very nice!");
+			}
 		}
 	}
 } 
